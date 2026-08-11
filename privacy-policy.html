@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Tedesco con Martina</title>
+<meta name="description" content="Informativa sulla privacy del sito Tedesco con Martina: dati raccolti, finalità del trattamento e diritti dell'utente ai sensi del GDPR.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNmNTkwMGUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDMiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Tedesco con Martina — Stylesheet
+   Palette, tipografia e componenti condivisi su tutte le pagine
+   ========================================================= */
+
+:root {
+  /* Colori */
+  --cream: #fffaf2;
+  --cream-deep: #fdecd3;
+  --white: #ffffff;
+  --orange: #f5900e;
+  --orange-dark: #d97a00;
+  --orange-soft: #ffe3b8;
+  --coral: #ff6f61;
+  --ink: #211a13;
+  --text: #3d342a;
+  --text-muted: #7a6f61;
+  --border: #f0dfc4;
+  --shadow: 0 14px 30px -12px rgba(120, 80, 20, 0.25);
+  --shadow-sm: 0 6px 16px -8px rgba(120, 80, 20, 0.22);
+
+  /* Tipografia */
+  --font-display: "Amaranth", "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* Layout */
+  --container: 1120px;
+  --radius-lg: 26px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+* { box-sizing: border-box; }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.visually-hidden:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); }
+h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: 88px 0; }
+.section--tight { padding: 64px 0; }
+.section--cream { background: var(--cream-deep); }
+.section--white { background: var(--white); }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+  margin-bottom: 14px;
+}
+
+.text-center { text-align: center; }
+.section-head { max-width: 680px; margin: 0 auto 48px; }
+.section-head p { color: var(--text-muted); font-size: 1.05rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn--primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.btn--outline {
+  background: transparent;
+  color: var(--orange-dark);
+  border: 1.5px solid var(--orange);
+}
+.btn--outline:hover { background: var(--orange-soft); transform: translateY(-2px); }
+
+.btn--small { padding: 10px 20px; font-size: 0.88rem; }
+.btn--block { width: 100%; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 250, 242, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, padding 0.25s ease;
+}
+.site-header.is-scrolled {
+  box-shadow: 0 4px 18px -10px rgba(70, 45, 10, 0.25);
+  border-bottom-color: var(--border);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  transition: padding 0.25s ease;
+  gap: 20px;
+}
+.site-header.is-scrolled .container { padding-top: 12px; padding-bottom: 12px; }
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.logo span { color: var(--coral); }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.main-nav a {
+  font-weight: 500;
+  font-size: 0.96rem;
+  color: var(--text);
+  position: relative;
+  padding: 4px 2px;
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -2px;
+  height: 2px;
+  background: var(--orange);
+  transition: right 0.25s ease;
+}
+.main-nav a:hover::after,
+.main-nav a[aria-current="page"]::after { right: 0; }
+.main-nav a[aria-current="page"] { color: var(--orange-dark); }
+
+.header-cta { display: flex; align-items: center; gap: 18px; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.nav-toggle span {
+  width: 24px; height: 2.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+  .main-nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(320px, 80vw);
+    height: 100vh;
+    background: var(--cream);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 32px 32px;
+    gap: 26px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -14px 0 30px -20px rgba(0,0,0,0.3);
+  }
+  .main-nav.is-open { transform: translateX(0); }
+  .main-nav a { font-size: 1.1rem; }
+  .header-cta .btn--primary { display: none; }
+  .main-nav .btn--primary { display: inline-flex; margin-top: 6px; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 76px 0 90px;
+  background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+  overflow: hidden;
+}
+.hero .container { text-align: center; max-width: 780px; }
+.hero h1 span { color: var(--orange); display: block; }
+.hero p { font-size: 1.08rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+.hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+/* ---------- Cards ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.card h3 { margin-bottom: 10px; }
+.card p { color: var(--text-muted); margin-bottom: 18px; font-size: 0.97rem; }
+
+.card--service { text-align: center; }
+
+.card--outlined {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  box-shadow: none;
+}
+.card--outlined:hover { border-color: var(--orange); box-shadow: var(--shadow-sm); }
+
+.card-list { list-style: none; margin: 0; padding: 0; }
+.card-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.96rem;
+  color: var(--text);
+}
+.card-list li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.55em;
+  width: 7px; height: 7px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+
+/* ---------- Pills / topics ---------- */
+.pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.pill {
+  background: var(--orange-soft);
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+  padding: 16px 18px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.pill:hover { background: var(--orange); color: #fff; transform: translateY(-2px); }
+
+/* ---------- Stats ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+  margin-top: 56px;
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--orange);
+  font-weight: 700;
+}
+.stat-label { color: var(--text-muted); font-size: 0.95rem; margin-top: 4px; }
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 56px;
+  align-items: center;
+}
+.about-photo-wrap { position: relative; justify-self: center; }
+.about-photo {
+  width: 260px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 6px solid var(--white);
+}
+.about-copy p { color: var(--text); }
+.about-copy .lede { font-size: 1.08rem; color: var(--ink); font-weight: 500; }
+
+/* ---------- Timeline (step process) ---------- */
+.timeline { position: relative; max-width: 720px; margin: 0 auto; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 27px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--orange) 0 8px, transparent 8px 16px);
+}
+.timeline-step {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  padding-bottom: 44px;
+}
+.timeline-step:last-child { padding-bottom: 0; }
+.timeline-num {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+}
+.timeline-body h3 { margin-bottom: 6px; }
+.timeline-body p { color: var(--text-muted); margin-bottom: 0; }
+
+/* ---------- Testimonials ---------- */
+.testimonial-track-wrap { position: relative; }
+.testimonial-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 4px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) var(--cream-deep);
+}
+.testimonial-track::-webkit-scrollbar { height: 8px; }
+.testimonial-track::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 8px; }
+.testimonial-track::-webkit-scrollbar-track { background: var(--cream-deep); border-radius: 8px; }
+
+.testimonial-card {
+  scroll-snap-align: start;
+  flex: 0 0 min(340px, 82vw);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.testimonial-rating { color: var(--orange-dark); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; margin-bottom: 14px; text-transform: uppercase; }
+.testimonial-quote { font-size: 0.98rem; color: var(--text); margin-bottom: 20px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  color: var(--orange-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.testimonial-name { font-weight: 600; font-size: 0.92rem; color: var(--ink); }
+.testimonial-role { font-size: 0.82rem; color: var(--text-muted); }
+
+.testimonial-nav { display: flex; justify-content: center; gap: 12px; margin-top: 8px; }
+.testimonial-nav button {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--orange);
+  background: var(--white);
+  color: var(--orange-dark);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.testimonial-nav button:hover { background: var(--orange); color: #fff; }
+
+.testimonial-disclaimer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 18px;
+}
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+.faq-question .plus {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  color: var(--orange-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+.faq-item[open] .faq-question .plus { transform: rotate(45deg); }
+.faq-answer { padding: 0 24px 22px; color: var(--text-muted); font-size: 0.96rem; }
+
+/* ---------- CTA band ---------- */
+.cta-band { text-align: center; }
+.cta-band p { color: var(--text-muted); margin-bottom: 28px; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--cream-deep); padding: 64px 0 28px; border-top: 1px solid var(--border); }
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand p { color: var(--text-muted); margin-top: 8px; max-width: 280px; font-size: 0.95rem; }
+.footer-nav { display: flex; gap: 60px; flex-wrap: wrap; }
+.footer-col h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 14px; }
+.footer-col a { display: block; margin-bottom: 10px; font-size: 0.95rem; color: var(--text); }
+.footer-col a:hover { color: var(--orange-dark); }
+.footer-social { display: flex; gap: 18px; margin-top: 16px; }
+.footer-social a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--orange-dark);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.footer-social a:hover { border-color: var(--orange-dark); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.footer-bottom a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  right: 22px; bottom: 22px;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+  z-index: 90;
+}
+.back-to-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--orange); }
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > * { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0.02s; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.18s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.26s; }
+
+/* ---------- Anchor offset for sticky header (single-page nav) ---------- */
+section[id] { scroll-margin-top: 92px; }
+
+/* ---------- Booking form ---------- */
+.booking-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { margin-bottom: 18px; }
+.form-field label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  color: var(--text);
+  background: var(--cream);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(245, 144, 14, 0.14);
+}
+.form-field textarea { resize: vertical; min-height: 110px; }
+.form-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 14px; text-align: center; }
+.form-success {
+  display: none;
+  background: var(--orange-soft);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  margin-top: 18px;
+  font-size: 0.92rem;
+  text-align: center;
+}
+.form-success.is-visible { display: block; }
+
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+  .booking-wrap { padding: 28px 22px; }
+}
+
+/* ---------- Legal pages ---------- */
+.legal { padding: 64px 0 100px; }
+.legal .container { max-width: 780px; }
+.legal h2 { margin-top: 2em; }
+.legal h2:first-of-type { margin-top: 0.5em; }
+.legal ul { padding-left: 20px; color: var(--text); }
+.legal li { margin-bottom: 8px; }
+.legal .updated { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px; }
+
+/* ---------- 404 ---------- */
+.error-page { padding: 130px 0; text-align: center; }
+.error-page .big { font-family: var(--font-display); font-size: clamp(4rem, 12vw, 7rem); color: var(--orange); line-height: 1; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .card-grid, .pill-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo-wrap { order: -1; }
+  .stats { grid-template-columns: 1fr; gap: 32px; }
+  .footer-top { flex-direction: column; }
+}
+
+@media (max-width: 560px) {
+  .section { padding: 60px 0; }
+  .btn { padding: 13px 24px; font-size: 0.92rem; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Tedesco <span>con</span> Martina</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#lezioni">Lezioni 1:1</a>
+      <a href="index.html#trasferimento">Supporto trasferimento</a>
+      <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+    </nav>
+    <div class="header-cta">
+      <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="legal">
+  <div class="container">
+    <span class="eyebrow">Informativa</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Ultimo aggiornamento: <span data-year>2026</span></p>
+
+    <p><strong>[MODELLO DA PERSONALIZZARE — non è una consulenza legale.]</strong> Questo testo è un punto di partenza generico. Prima di pubblicarlo, fallo verificare da un consulente privacy/DPO o generalo con un servizio dedicato (es. iubenda), soprattutto se utilizzi strumenti di terze parti (Google Analytics, Meta Pixel, sistemi di prenotazione, newsletter, ecc.), poiché ognuno richiede clausole specifiche.</p>
+
+    <h2>1. Titolare del trattamento</h2>
+    <p>Il Titolare del trattamento dei dati è Maria Martina Fabio, P.I. 04179010360, contattabile all'indirizzo email: <a href="mailto:info@tedescoconmartina.it">info@tedescoconmartina.it</a>.</p>
+
+    <h2>2. Che dati raccogliamo</h2>
+    <p>A seconda di come interagisci con il sito, possiamo raccogliere:</p>
+    <ul>
+      <li>Dati forniti volontariamente via email o form di contatto (nome, indirizzo email, contenuto del messaggio);</li>
+      <li>Dati tecnici raccolti automaticamente durante la navigazione (indirizzo IP, tipo di browser, pagine visitate), se sono attivi strumenti di analisi (vedi Cookie Policy);</li>
+      <li>Eventuali dati forniti in fase di prenotazione di una consulenza o di una lezione, tramite strumenti di terze parti (es. servizi di calendario/booking), se utilizzati.</li>
+    </ul>
+
+    <h2>3. Finalità del trattamento</h2>
+    <ul>
+      <li>Rispondere a richieste di contatto, informazioni o preventivi;</li>
+      <li>Gestire l'erogazione dei servizi richiesti (lezioni di tedesco, supporto al trasferimento);</li>
+      <li>Adempiere a obblighi contabili e fiscali;</li>
+      <li>Migliorare il sito e i contenuti (se sono attivi strumenti di analisi statistica anonimizzata).</li>
+    </ul>
+
+    <h2>4. Base giuridica</h2>
+    <p>Il trattamento si basa sul consenso dell'utente (es. invio volontario di un messaggio), sull'esecuzione di misure precontrattuali o contrattuali (richiesta di un servizio) e, ove applicabile, sull'adempimento di obblighi di legge.</p>
+
+    <h2>5. Conservazione dei dati</h2>
+    <p>I dati personali sono conservati per il tempo necessario a soddisfare le finalità per cui sono stati raccolti e, in ogni caso, nel rispetto dei termini di legge previsti in materia fiscale e contabile.</p>
+
+    <h2>6. Comunicazione e trasferimento dei dati</h2>
+    <p>I dati non vengono venduti a terzi. Possono essere condivisi con fornitori di servizi tecnici (es. hosting, servizi di prenotazione o email) strettamente necessari all'erogazione del servizio, nei limiti previsti dalla normativa vigente.</p>
+
+    <h2>7. Diritti dell'utente</h2>
+    <p>Ai sensi del Regolamento (UE) 2016/679 (GDPR), hai diritto di accedere ai tuoi dati, richiederne la rettifica, la cancellazione, la limitazione del trattamento, la portabilità, nonché di opporti al trattamento, scrivendo a <a href="mailto:info@tedescoconmartina.it">info@tedescoconmartina.it</a>.</p>
+
+    <h2>8. Cookie</h2>
+    <p>Per informazioni dettagliate sui cookie utilizzati dal sito, consulta la <a href="cookie-policy.html">Cookie Policy</a>.</p>
+
+    <h2>9. Modifiche a questa informativa</h2>
+    <p>Questa informativa può essere aggiornata periodicamente. Ti invitiamo a consultarla regolarmente.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Maria Martina Fabio — P.I. 04179010360</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Tedesco con Martina — interazioni condivise
+document.addEventListener("DOMContentLoaded", () => {
+  /* ---------- Header sticky ---------- */
+  const header = document.querySelector(".site-header");
+  const onScroll = () => {
+    if (!header) return;
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+
+    const backTop = document.querySelector(".back-to-top");
+    if (backTop) backTop.classList.toggle("is-visible", window.scrollY > 500);
+  };
+  document.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Mobile nav ---------- */
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".main-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ---------- Back to top ---------- */
+  const backTop = document.querySelector(".back-to-top");
+  if (backTop) {
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  /* ---------- Animated stat counters ---------- */
+  const counters = document.querySelectorAll("[data-count-to]");
+  if (counters.length) {
+    const animateCounter = (el) => {
+      const target = el.getAttribute("data-count-to");
+      const numMatch = target.match(/[\d.]+/);
+      if (!numMatch) return; // non-numeric (e.g. "A1-C1") — leave as is
+      const end = parseFloat(numMatch[0]);
+      const prefix = target.split(numMatch[0])[0];
+      const suffix = target.split(numMatch[0])[1] || "";
+      const duration = 1200;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(end * eased);
+        el.textContent = `${prefix}${value}${suffix}`;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    if ("IntersectionObserver" in window) {
+      const cio = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              cio.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+      counters.forEach((el) => cio.observe(el));
+    }
+  }
+
+  /* ---------- Testimonial carousel ---------- */
+  const track = document.querySelector(".testimonial-track");
+  const prevBtn = document.querySelector("[data-testimonial-prev]");
+  const nextBtn = document.querySelector("[data-testimonial-next]");
+  if (track && prevBtn && nextBtn) {
+    const scrollByCard = (dir) => {
+      const card = track.querySelector(".testimonial-card");
+      if (!card) return;
+      const gap = 24;
+      const amount = card.offsetWidth + gap;
+      track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    };
+    prevBtn.addEventListener("click", () => scrollByCard(-1));
+    nextBtn.addEventListener("click", () => scrollByCard(1));
+  }
+
+  /* ---------- Booking form ---------- */
+  const bookingForm = document.querySelector("#booking-form");
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(bookingForm);
+      const nome = (data.get("nome") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const telefono = (data.get("telefono") || "").toString().trim();
+      const interesse = (data.get("interesse") || "").toString().trim();
+      const messaggio = (data.get("messaggio") || "").toString().trim();
+
+      const to = bookingForm.getAttribute("data-to") || "info@tedescoconmartina.it";
+      const subject = `Richiesta consulenza gratuita — ${nome || "nuovo contatto"}`;
+      const bodyLines = [
+        `Nome: ${nome}`,
+        `Email: ${email}`,
+        telefono ? `Telefono: ${telefono}` : null,
+        `Interesse: ${interesse}`,
+        "",
+        "Messaggio:",
+        messaggio,
+      ].filter(Boolean);
+      const body = bodyLines.join("\n");
+
+      const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+
+      const success = document.querySelector("#booking-success");
+      if (success) success.classList.add("is-visible");
+      bookingForm.reset();
+    });
+  }
+
+  /* ---------- Current year in footer ---------- */
+  document.querySelectorAll("[data-year]").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+});
+
+</script>
+</body>
+</html>
